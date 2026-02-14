@@ -1,0 +1,26 @@
+{
+  "$schema": "../gen/schemas/desktop-schema.json",
+  "identifier": "default",
+  "description": "enables the default permissions",
+  "windows": [
+    "main"
+  ],
+  "permissions": [
+    "core:default",
+    "dialog:default",
+    "dialog:allow-open",
+    "fs:default",
+    "fs:allow-read-text-file",
+    "fs:allow-exists",
+    {
+      "identifier": "fs:scope",
+      "allow": [
+        { "path": "$HOME/.local/share/icons/**" },
+        { "path": "$HOME/.icons/**" },
+        { "path": "/usr/share/icons/**" },
+        { "path": "$HOME/.config/kitty/**" },
+        { "path": "$TEMP/**" }
+      ]
+    }
+  ]
+}
